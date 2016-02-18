@@ -6,15 +6,16 @@
         xmlns:local="clr-namespace:PDF_Joiner"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="PDF Joiner" Height="300" Width="525">
+        Title="PDF Joiner" Height="300" Width="525" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="btnAddFiles" Content="Add Files" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnAddFiles_Click" />
-        <Button x:Name="btnRemoveFile" Content="Remove" HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnRemoveFile_Click"/>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnClear_Click"/>
-        <ListBox x:Name="lbFiles" HorizontalAlignment="Left" Height="160" Margin="10,43,0,0" VerticalAlignment="Top" Width="497"/>
-        <Button x:Name="btnJoin" Content="Join PDFs" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnJoin_Click"/>
-        <Controls:MetroProgressBar x:Name="pgJoin"  HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Width="497" IsIndeterminate="False" Height="15"/>
-        <Button x:Name="btnUp" Content="Up" HorizontalAlignment="Left" Margin="432,10,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnUp_Click" />
-        <Button x:Name="btnDown" Content="Down" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnDown_Click" />
+        <Button x:Name="btnAddFiles" Content="Add Files" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnAddFiles_Click" ToolTip="Launches a file picker to select file(s)" />
+        <Button x:Name="btnRemoveFile" Content="Remove" HorizontalAlignment="Left" Margin="90,31,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnRemoveFile_Click" ToolTip="Removed the currently selected items."/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="170,31,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnClear_Click" ToolTip="Clears all current items."/>
+        <ListBox x:Name="lbFiles" HorizontalAlignment="Left" Height="155" Margin="12,73,0,0" VerticalAlignment="Top" Width="497"/>
+        <Button x:Name="btnJoin" Content="Join PDFs" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnJoin_Click" ToolTip="Performs the Join on the listed files."/>
+        <Controls:MetroProgressBar x:Name="pgJoin"  HorizontalAlignment="Left" Margin="90,233,0,0" VerticalAlignment="Top" Width="286" IsIndeterminate="False" Height="28"/>
+        <Button x:Name="btnUp" Content="Up" HorizontalAlignment="Left" Margin="432,31,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnUp_Click" ToolTip="Moves the current selection up." />
+        <Button x:Name="btnDown" Content="Down" HorizontalAlignment="Left" Margin="352,31,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource SquareButtonStyle}" Click="btnDown_Click" ToolTip="Moves the current selection down." />
+        <TextBlock x:Name="txtInstructions" HorizontalAlignment="Left" Margin="12,10,0,0" TextWrapping="Wrap" Text="To add PDF files use the 'add files' button." VerticalAlignment="Top"/>
     </Grid>
 </Controls:MetroWindow>
